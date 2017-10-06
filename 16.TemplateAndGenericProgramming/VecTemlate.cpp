@@ -19,12 +19,12 @@ template<typename T> ostream& operator<<(ostream&, Vec<T>&);
 
 template<typename T>
 class Vec {
-  friend bool operator==<T>(const Vec<T> &lhs, const Vec<T> &rhs);
-  friend bool operator!=<T>(const Vec<T> &lhs, const Vec<T> &rhs);
-  friend bool operator<=<T>(const Vec<T> &lhs, const Vec<T> &rhs);
-  friend bool operator>=<T>(const Vec<T> &lhs, const Vec<T> &rhs);
-  friend bool operator< <T>(const Vec<T> &lhs, const Vec<T> &rhs);
-  friend bool operator> <T>(const Vec<T> &lhs, const Vec<T> &rhs);
+  friend bool operator==<T>(const Vec<T>&, const Vec<T>&);
+  friend bool operator!=<T>(const Vec<T>&, const Vec<T>&);
+  friend bool operator<=<T>(const Vec<T>&, const Vec<T>&);
+  friend bool operator>=<T>(const Vec<T>&, const Vec<T>&);
+  friend bool operator< <T>(const Vec<T>&, const Vec<T>&);
+  friend bool operator> <T>(const Vec<T>&, const Vec<T>&);
   friend ostream& operator<<<T>(ostream&, Vec<T>&);
 public:
   Vec(): elements(nullptr), first_free(nullptr), cap(nullptr) {}
@@ -210,7 +210,7 @@ int main(void) {
   cout << "begin_resize: " << vi.begin() << endl;
 
   std::cout << vi;
-  std::cout << vi[3] << std::endl;
+  std::cout << vi[2] << std::endl;
   return 0;
 }
 
